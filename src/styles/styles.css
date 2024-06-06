@@ -35,7 +35,6 @@
         height: min-content;
         border: 0.1px solid #ddd;
         padding-top:5px;
-        background-color: red;
         text-align-last: left;
         
         
@@ -64,6 +63,9 @@
         padding-top: 2px;
         padding-bottom: 2px;
         border-top: 0.1px solid #e0e0e0;
+        padding-left: 30px;
+        padding-right: 0px;
+  
         /* overflow: hidden;
         white-space: nowrap; */
         /* width: 100% */
@@ -84,6 +86,9 @@
     }
     td.top{
         padding-top: 10px !important;
+        overflow: hidden;
+        
+
     }
 
     td#heading.bottom{
@@ -101,6 +106,15 @@
     #rotatetrue {
         transform: rotate(180deg);
     }
+
+    #rotatefalse {
+      transform: rotate(0deg);
+    }
+
+    #rotatemed {
+      transform: rotate(270deg);
+    }
+
 
 
     
@@ -141,8 +155,8 @@
 
       .datacell {
         padding: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
         vertical-align: middle;
       }
 
@@ -159,7 +173,7 @@
       }
 
       .tablerow {
-        border-bottom: 1px solid lightgray;
+        border-top: 0.5px solid gray;
         text-align: center;
         
       }
@@ -180,3 +194,23 @@
       .bx--accordion__title {
         font-weight: bold !important;
       }
+
+
+.maintable{
+  width: 100%
+}
+
+.mainTableWrapper {
+  padding-left: 20px;
+  width: min-content;
+  display: flex;
+  align-content: stretch;
+}
+
+
+.links_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 6px;
+}

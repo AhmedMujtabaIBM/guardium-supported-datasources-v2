@@ -19,8 +19,11 @@
     "@testing-library/user-event": "^13.5.0",
     "carbon-components": "^10.53.0",
     "carbon-components-react": "^7.53.0",
+    "d3": "^7.8.5",
+    "fs": "^0.0.1-security",
     "fuse.js": "^6.5.3",
     "js-yaml": "^4.1.0",
+    "papaparse": "^5.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-expand-animated": "^1.0.2",
@@ -29,12 +32,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node src/scripts/convert.js && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "consol": "rm ./src/data/consolidated_csvs/OnPrem_UC.json && python3 ./consolidation-script2/runner.py ./consolidation-script2/config/configOnPrem_UC.yaml",
+    "consol_deploy_true": "rm -rf ./src/data/consolidated_csvs/* && python3 ./consolidation-script2/run_all.py ./consolidation-script2/config && gh-pages -d build"
+    
   },
   "eslintConfig": {
     "extends": [
