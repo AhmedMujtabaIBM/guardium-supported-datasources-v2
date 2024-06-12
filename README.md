@@ -16,7 +16,8 @@ This guide provides step-by-step instructions for maintaining the compatibility 
 
 ## Project Requirements
 Before beginning the maintenance process, ensure that your system meets the following requirements:
-- **npm**: Version 10.24.1
+- **NPM**: Version 8.19.2
+- **Node**: Version 16.18.1
 - **Python**: Version 3.11.4
 
 
@@ -50,13 +51,9 @@ To update the compatibility data, the old CSV files need to be replaced with the
 ## Running Consolidation Scripts
 After replacing the CSV files, a consolidation script must be run to consolidate and integrate the changes.
 
-1. In a different terminal, navigate to the directory where the script is located: `./consolidation-script2`.
+1. Run the consolidation script using Python3:
    ```bash
-   cd consolidation-script2
-   ```
-2. Run the consolidation script using Python3:
-   ```bash
-   python3 run_all.py ./config
+   python3 consolidation-script2/run_all.py ./consolidation-script2/config
    ```
 ## Restarting the Application Locally
 After running the consolidation script, it's necessary to stop and restart the application to ensure that all updates are properly applied and functioning.
@@ -84,7 +81,7 @@ After updating the CSV files, running the consolidation script and checking your
 
 3. **Verify the deployment**:
    - Check your GitHub repository to confirm that the `gh-pages` branch has received the updates.
-   - Visit your GitHub Pages URL to see the changes in action.
+   - Visit your GitHub Pages URL to see the changes in action (This can take upto 30 mins to come into effect).
 
 Following these steps will make your updates live
 
